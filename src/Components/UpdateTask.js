@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 const UpdateTask = ({task}) => {
     
     const [show, setShow] = useState(false);
-    const [name,setName]=useState('')
+    const [name,setName]=useState(task.name)
     const dispatch=useDispatch();
     const Update=(id, name)=>{
         if(name.trim())  {
@@ -25,7 +25,7 @@ const UpdateTask = ({task}) => {
           <Form>
   <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label>Update task</Form.Label>
-    <Form.Control type="text" placeholder={task.name}  onChange={e=>setName(e.target.value)}  />
+    <Form.Control type="text" value={name}  onChange={e=>setName(e.target.value)}  />
   </Form.Group>
 
 </Form>
