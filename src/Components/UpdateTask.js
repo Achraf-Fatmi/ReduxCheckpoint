@@ -25,7 +25,7 @@ const UpdateTask = ({task}) => {
           <Form>
   <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label>Update task</Form.Label>
-    <Form.Control type="text" placeholder="add task here"  onChange={e=>setName(e.target.value)}  />
+    <Form.Control type="text" placeholder={task.name}  onChange={e=>setName(e.target.value)}  />
   </Form.Group>
 
 </Form>
